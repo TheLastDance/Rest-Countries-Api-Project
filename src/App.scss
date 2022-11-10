@@ -1,1 +1,163 @@
-@import 'resets';
+@import 'resets', 'fonts';
+
+
+$DarkBlue: hsl(209, 23%, 22%); // (Dark Mode Elements)
+$VeryDarkBlue: hsl(207, 26%, 17%); //(Dark Mode Background)
+$VeryDarkBlueLM: hsl(200, 15%, 8%); //(Light Mode Text)
+$DarkGray: hsl(0, 0%, 52%); //(Light Mode Input)
+$VeryLightGray: hsl(0, 0%, 98%); //(Light Mode Background)
+$White: hsl(0, 0%, 100%); //(Dark Mode Text & Light Mode Elements)
+
+@mixin font($family, $size, $color) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+}
+
+body {
+  font-family: 'NunitoSans-M';
+}
+
+.bar {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  padding: 0 5%;
+  background-color: $White;
+  box-shadow: 0px 3px 5px rgb(233, 232, 232);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $VeryDarkBlueLM;
+
+  h2 {
+    @include font('NunitoSans-B', '', $VeryDarkBlueLM);
+  }
+
+  .colormode {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    @include font('NunitoSans-M', 16px, $VeryDarkBlueLM);
+    cursor: pointer;
+    overflow: hidden;
+
+    .effect {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: -100%;
+      transition: .4s ease;
+      background-color: rgb(105, 159, 206);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .effect2 {
+      background-color: rgb(113, 206, 105);
+    }
+
+    &:hover {
+      .effect {
+        left: 0;
+      }
+
+      .effect2 {
+        left: 0;
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      margin: 2px 8px 0 0;
+      z-index: 2;
+    }
+
+    p {
+      z-index: 2;
+    }
+  }
+}
+
+.bar_dark_mode {
+  background-color: $DarkBlue;
+  box-shadow: 0px 3px 5px rgb(28, 36, 53);
+
+  h2 {
+    @include font('NunitoSans-B', '', $White);
+  }
+
+  .colormode {
+    @include font('NunitoSans-M', 16px, $White);
+  }
+}
+
+.content {
+  width: 100%;
+  padding: 0 5%;
+  margin: 0 auto;
+  padding-top: 100px;
+  background-color: $VeryLightGray;
+  color: $VeryDarkBlueLM;
+
+  .content_inputs {
+
+    input {
+      width: 200px;
+      transition: .4s ease;
+    }
+
+    input:focus {
+      width: 500px;
+    }
+
+    select {
+      float: right;
+    }
+  }
+
+  .countries {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 80px;
+
+    .country_card {
+      height: 320px;
+      background-color: $White;
+      box-shadow: 2px 3px 4px $DarkGray;
+      border-radius: 8px 8px 0 0;
+      text-decoration: none;
+      color: $VeryDarkBlueLM;
+
+      img {
+        width: 100%;
+        height: 160px;
+        border-radius: 8px 8px 0 0;
+      }
+    }
+  }
+
+}
+
+.content_dark_mode {
+  background-color: $VeryDarkBlue;
+  color: $White;
+
+  .countries {
+    .country_card {
+      background-color: $DarkBlue;
+      box-shadow: 2px 3px 8px rgb(33, 42, 61);
+      color: $White;
+    }
+  }
+}
+
+@media(max-width:1440px) {
+  .content {
+    .countries {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
