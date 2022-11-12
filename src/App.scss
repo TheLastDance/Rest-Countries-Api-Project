@@ -29,6 +29,7 @@ body {
   align-items: center;
   justify-content: space-between;
   color: $VeryDarkBlueLM;
+  z-index: 2;
 
   h2 {
     @include font('NunitoSans-B', '', $VeryDarkBlueLM);
@@ -50,13 +51,10 @@ body {
       top: 0;
       left: -100%;
       transition: .4s ease;
-      background-color: rgb(105, 159, 206);
+      background-color: $DarkGray;
       border-radius: 0 10px 10px 0;
     }
 
-    .effect2 {
-      background-color: rgb(113, 206, 105);
-    }
 
     &:hover {
       .effect {
@@ -83,7 +81,7 @@ body {
 
 .bar_dark_mode {
   background-color: $DarkBlue;
-  box-shadow: 0px 3px 5px rgb(28, 36, 53);
+  box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.05);
 
   h2 {
     @include font('NunitoSans-B', '', $White);
@@ -97,45 +95,172 @@ body {
 .content {
   width: 100%;
   padding: 0 5%;
+  padding-bottom: 30px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 120px;
   background-color: $VeryLightGray;
   color: $VeryDarkBlueLM;
+  min-height: 100vh;
 
   .content_inputs {
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 
     input {
-      width: 200px;
-      transition: .4s ease;
+      width: 300px;
+      height: 50px;
+      border-radius: 5px;
+      background-color: $White;
+      padding-left: 50px;
+      transition: .2s ease;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: none;
+      box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.05);
+      outline: none;
+      position: relative;
+      z-index: 1;
+      color: $VeryDarkBlueLM;
     }
 
     input:focus {
       width: 500px;
     }
 
-    select {
-      float: right;
+    svg {
+      position: absolute;
+      fill: $DarkGray;
+      left: 20px;
+      top: 17px;
+      z-index: 2;
     }
+
+    .letter_search {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+
+      span {
+        padding-right: 5px;
+        cursor: pointer;
+        color: $VeryDarkBlueLM;
+
+        &:hover {
+          color: aqua;
+        }
+      }
+    }
+
+    .dropdown {
+      position: relative;
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $White;
+        width: 200px;
+        height: 50px;
+        border-radius: 5px;
+        padding: 22px;
+        cursor: pointer;
+        transition: .2s ease;
+        box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.05);
+        @include font('NunitoSans-M', 14px, $VeryDarkBlueLM);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+
+        svg {
+          position: unset;
+          fill: $VeryDarkBlueLM;
+        }
+      }
+
+      .drop_menu {
+        position: absolute;
+        background-color: $White;
+        width: 200px;
+        height: fit-content;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.05);
+        @include font('NunitoSans-M', 14px, $VeryDarkBlueLM);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        margin-top: 5px;
+        z-index: 2;
+
+        .regions {
+          position: unset;
+          padding: 4px 22px;
+          box-shadow: unset;
+          width: auto;
+          height: fit-content;
+          margin: unset;
+          border-radius: unset;
+          @include font('NunitoSans-M', 14px, $VeryDarkBlueLM);
+        }
+
+        .regions:first-child {
+          padding-top: 15px;
+        }
+
+        .regions:last-child {
+          padding-bottom: 15px;
+        }
+
+        .regions:hover {
+          background-color: $DarkGray;
+        }
+      }
+    }
+
   }
 
   .countries {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 80px;
+    row-gap: 10px;
+    column-gap: 90px;
 
     .country_card {
-      height: 320px;
+      height: 350px;
       background-color: $White;
-      box-shadow: 2px 3px 4px $DarkGray;
-      border-radius: 8px 8px 0 0;
+      box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
       text-decoration: none;
       color: $VeryDarkBlueLM;
+      transition: .2s ease;
 
       img {
         width: 100%;
-        height: 160px;
+        height: 175px;
         border-radius: 8px 8px 0 0;
       }
+
+      .main_info {
+        padding: 20px;
+
+        h3 {
+          width: fit-content;
+        }
+      }
+
+    }
+
+    .country_card:hover {
+      transform: rotate(-10deg);
+    }
+
+    .hide {
+      display: none;
     }
   }
 
@@ -143,13 +268,64 @@ body {
 
 .content_dark_mode {
   background-color: $VeryDarkBlue;
-  color: $White;
 
   .countries {
     .country_card {
       background-color: $DarkBlue;
-      box-shadow: 2px 3px 8px rgb(33, 42, 61);
       color: $White;
+    }
+  }
+
+  .content_inputs {
+    svg {
+      fill: $White;
+    }
+
+    input {
+      background-color: $DarkBlue;
+      color: $White;
+    }
+
+    input::placeholder {
+      color: $White;
+    }
+
+    .letter_search {
+
+      span {
+        color: $White;
+
+        &:hover {
+          color: aqua;
+        }
+      }
+    }
+
+    .dropdown {
+
+      .title,
+      .drop_menu {
+        background-color: $DarkBlue;
+        color: $White;
+
+        svg {
+          fill: $White;
+        }
+
+        .regions {
+          color: $White;
+        }
+      }
+    }
+  }
+
+}
+
+@media(max-width:1650px) {
+  .content {
+    .countries {
+      row-gap: 10px;
+      column-gap: 40px;
     }
   }
 }
@@ -158,6 +334,8 @@ body {
   .content {
     .countries {
       grid-template-columns: repeat(4, 1fr);
+      row-gap: 60px;
+      column-gap: 60px;
     }
   }
 }
