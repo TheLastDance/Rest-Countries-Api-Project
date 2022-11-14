@@ -31,8 +31,13 @@ body {
   color: $VeryDarkBlueLM;
   z-index: 2;
 
-  h2 {
-    @include font('NunitoSans-B', '', $VeryDarkBlueLM);
+  a {
+    text-decoration: none;
+
+    h2 {
+      font-family: 'NunitoSans-B';
+      color: $VeryDarkBlueLM;
+    }
   }
 
   .colormode {
@@ -60,10 +65,6 @@ body {
       .effect {
         left: 0;
       }
-
-      .effect2 {
-        left: 0;
-      }
     }
 
     svg {
@@ -76,19 +77,6 @@ body {
     p {
       z-index: 2;
     }
-  }
-}
-
-.bar_dark_mode {
-  background-color: $DarkBlue;
-  box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.05);
-
-  h2 {
-    @include font('NunitoSans-B', '', $White);
-  }
-
-  .colormode {
-    @include font('NunitoSans-M', 16px, $White);
   }
 }
 
@@ -151,7 +139,7 @@ body {
         color: $VeryDarkBlueLM;
 
         &:hover {
-          color: aqua;
+          color: $DarkGray;
         }
       }
     }
@@ -266,60 +254,266 @@ body {
 
 }
 
-.content_dark_mode {
-  background-color: $VeryDarkBlue;
+.loader_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  width: 100%;
 
-  .countries {
-    .country_card {
-      background-color: $DarkBlue;
+  .loader {
+    border: 4px solid transparent;
+    border-top: 4px solid $DarkGray;
+    border-left: 4px solid $DarkGray;
+    border-right: 4px solid $DarkGray;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 4px solid transparent;
+      border-bottom: 4px solid $DarkBlue;
+      border-left: 4px solid $DarkBlue;
+      border-right: 4px solid $DarkBlue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        border-top: 4px solid $DarkGray;
+        border-left: 4px solid $DarkGray;
+        border-right: 4px solid $DarkGray;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.country_details {
+  width: 100%;
+  padding: 0 5%;
+  padding-top: 70px;
+  margin: 0 auto;
+  background-color: $VeryLightGray;
+  @include font('NunitoSans-M', 16px, $VeryDarkBlueLM);
+  min-height: 100vh;
+
+
+  .country_details_container {
+
+
+    button {
+      margin-top: 75px;
+      padding: 6px 30px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.07);
+      background-color: $White;
+      cursor: pointer;
+      @include font('NunitoSans-L', 14px, $VeryDarkBlueLM);
+
+      svg {
+        fill: $VeryDarkBlueLM;
+        width: 17px;
+        height: 17px;
+        margin-right: 8px;
+      }
+
+    }
+
+    .country_main {
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      // gap: 100px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      margin-top: 80px;
+
+      .country_flag {
+
+        width: 750px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .country_info {
+        width: 750px;
+        margin-left: 20px;
+
+        h1 {
+          font-family: 'NunitoSans-B';
+        }
+
+        &_2 {
+          margin-top: 50px;
+          display: flex;
+          justify-content: space-between;
+
+          p {
+            font-family: 'NunitoSans-M';
+            line-height: 30px;
+
+            span {
+              font-family: 'NunitoSans-L';
+            }
+          }
+
+          .country_info_2_right {
+            max-width: 65%;
+          }
+        }
+
+        .border_countries {
+          margin-top: 80px;
+
+          a {
+            display: inline-flex;
+            justify-content: center;
+            width: fit-content;
+            min-width: 80px;
+            padding: 6px 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.07);
+            background-color: $White;
+            cursor: pointer;
+            text-decoration: none;
+            @include font('NunitoSans-L', 14px, $VeryDarkBlueLM);
+          }
+
+          a:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark_mode {
+  .bar {
+    background-color: $DarkBlue;
+    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.05);
+
+    h2 {
+      font-family: 'NunitoSans-B';
       color: $White;
+    }
+
+    .colormode {
+      @include font('NunitoSans-M', 16px, $White);
     }
   }
 
-  .content_inputs {
-    svg {
-      fill: $White;
-    }
+  .content {
+    background-color: $VeryDarkBlue;
 
-    input {
-      background-color: $DarkBlue;
-      color: $White;
-    }
-
-    input::placeholder {
-      color: $White;
-    }
-
-    .letter_search {
-
-      span {
+    .countries {
+      .country_card {
+        background-color: $DarkBlue;
         color: $White;
+      }
+    }
 
-        &:hover {
-          color: aqua;
+    .content_inputs {
+      svg {
+        fill: $White;
+      }
+
+      input {
+        background-color: $DarkBlue;
+        color: $White;
+      }
+
+      input::placeholder {
+        color: $White;
+      }
+
+      .letter_search {
+
+        span {
+          color: $White;
+        }
+      }
+
+      .dropdown {
+
+        .title,
+        .drop_menu {
+          background-color: $DarkBlue;
+          color: $White;
+
+          svg {
+            fill: $White;
+          }
+
+          .regions {
+            color: $White;
+          }
         }
       }
     }
 
-    .dropdown {
+  }
 
-      .title,
-      .drop_menu {
+  .country_details {
+    background-color: $VeryDarkBlue;
+    color: $White;
+
+    .country_details_container {
+      button {
         background-color: $DarkBlue;
         color: $White;
 
         svg {
           fill: $White;
         }
+      }
 
-        .regions {
-          color: $White;
+      .country_main {
+        .country_info {
+          .border_countries {
+            a {
+              background-color: $DarkBlue;
+              color: $White;
+            }
+          }
         }
       }
     }
   }
 
 }
+
+
 
 @media(max-width:1650px) {
   .content {

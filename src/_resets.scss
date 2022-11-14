@@ -26,3 +26,19 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 0;
     height: 0;
 }
+
+button,
+button:focus {
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:active {
+    outline: none;
+    background: transparent;
+    border: 1px solid grey;
+}
