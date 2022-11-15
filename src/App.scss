@@ -137,10 +137,10 @@ body {
         padding-right: 5px;
         cursor: pointer;
         color: $VeryDarkBlueLM;
+      }
 
-        &:hover {
-          color: $DarkGray;
-        }
+      span:hover {
+        color: $DarkGray;
       }
     }
 
@@ -461,6 +461,10 @@ body {
 
         span {
           color: $White;
+        }
+
+        span:hover {
+          color: $DarkGray;
         }
       }
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ReactComponent as Arrow } from '../../svg/arrow-left.svg'; //icon
 
 
-function CountryDetails({ mode, mainApi }) {
+function CountryDetails({ mainApi }) {
     const url = window.location.pathname.slice(1);
     const [api, setApi] = useState([]);
 
@@ -12,6 +12,8 @@ function CountryDetails({ mode, mainApi }) {
             .then(json => setApi(json))
             .catch(e => console.error(e))
     }, [url]);
+
+    console.log(url);
 
     return (
         <div className='country_details'>

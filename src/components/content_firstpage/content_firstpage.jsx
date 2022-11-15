@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ContentInputs from "./child elements/content_inputs";
 import Countries from "./child elements/countries";
 
@@ -35,6 +35,20 @@ function ContentFirstPage({ api }) {
         setFilterBy({ bySearch: false, byRegion: true, byLetter: false });
     }
 
+    useEffect(() => {
+        const data1 = window.sessionStorage.getItem('search');
+        const data2 = window.sessionStorage.getItem('filterBy');
+        const data3 = window.sessionStorage.getItem('regionFilter');
+        if (data1 !== null) setSearch(JSON.parse(data1));
+        if (data2 !== null) setFilterBy(JSON.parse(data2));
+        if (data3 !== null) setRegionFilter(JSON.parse(data3));
+    }, []);
+
+    useEffect(() => {
+        sessionStorage.setItem('search', JSON.stringify(search));
+        sessionStorage.setItem('filterBy', JSON.stringify(filterBy));
+        sessionStorage.setItem('regionFilter', JSON.stringify(regionFilter));
+    }, [search, filterBy, regionFilter]);
 
 
     return (
