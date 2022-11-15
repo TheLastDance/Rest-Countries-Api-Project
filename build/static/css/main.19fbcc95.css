@@ -55,7 +55,7 @@ button:active {
     font-family: NunitoSans-M;
     font-style: normal;
     font-weight: 600;
-    src: url(../static/media/NunitoSans-SemiBold.0cfa405f6bb320ea6867.woff2) format("woff2"), url(../static/media/NunitoSans-SemiBold.4ce75b175ef614411eb2.woff) format("woff")
+    src: url(../media/NunitoSans-SemiBold.0cfa405f6bb320ea6867.woff2) format("woff2"), url(../media/NunitoSans-SemiBold.4ce75b175ef614411eb2.woff) format("woff")
 }
 
 @font-face {
@@ -63,7 +63,7 @@ button:active {
     font-family: NunitoSans-L;
     font-style: normal;
     font-weight: 300;
-    src: url(../static/media/NunitoSans-Light.95d0ad530f0d070ad44c.woff2) format("woff2"), url(../static/media/NunitoSans-Light.d84a76763ea532730302.woff) format("woff")
+    src: url(../media/NunitoSans-Light.95d0ad530f0d070ad44c.woff2) format("woff2"), url(../media/NunitoSans-Light.d84a76763ea532730302.woff) format("woff")
 }
 
 @font-face {
@@ -71,7 +71,7 @@ button:active {
     font-family: NunitoSans-B;
     font-style: normal;
     font-weight: 700;
-    src: url(../static/media/NunitoSans-ExtraBold.5b5e0eccfdb81b30222d.woff2) format("woff2"), url(../static/media/NunitoSans-ExtraBold.cfb0ae0a35db58384df6.woff) format("woff")
+    src: url(../media/NunitoSans-ExtraBold.5b5e0eccfdb81b30222d.woff2) format("woff2"), url(../media/NunitoSans-ExtraBold.cfb0ae0a35db58384df6.woff) format("woff")
 }
 
 body {
