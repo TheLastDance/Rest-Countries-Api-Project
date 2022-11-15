@@ -24,6 +24,7 @@ function App() {
     setMode(prev => !prev);
   }
 
+  //changed
   return (
     <div className={!mode || mode === null ? null : 'dark_mode'}>
       <nav className='bar'>

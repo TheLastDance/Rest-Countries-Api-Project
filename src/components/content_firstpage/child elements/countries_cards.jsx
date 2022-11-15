@@ -1,7 +1,7 @@
 function CountriesCards({ item, search, filterBy }) {
     const exp = (item.name.common.toLowerCase().search(search) === -1 && filterBy.bySearch)
         || (item.name.common[0] !== search && filterBy.byLetter) || (item.region.search(search) === -1 && filterBy.byRegion) ? 'country_card hide' : 'country_card';
-    //1
+
     return (
         <a href={`${item.name.common}`}
             className={exp}>

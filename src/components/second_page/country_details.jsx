@@ -3,7 +3,7 @@ import { ReactComponent as Arrow } from '../../svg/arrow-left.svg'; //icon
 
 
 function CountryDetails({ mainApi }) {
-    const url = window.location.pathname.slice(1).substring(window.location.pathname.slice(1).lastIndexOf('/') + 1);
+    const url = window.location.pathname.slice(1).substring(window.location.pathname.slice(1).lastIndexOf('/') + 1); //changed
     const [api, setApi] = useState([]);
 
     useEffect(() => {
@@ -36,6 +36,8 @@ function CountryDetails({ mainApi }) {
                                         <p className="p-info">Capital: <span>{item.capital ? item.capital.join(", ") : null}</span></p>
                                     </div>
                                     <div className="country_info_2_right">
+                                        <p className="p-info">Area: <span>{`${item.area.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} km2`}</span> </p>
+                                        <p className="p-info">Demonym: <span>{item.demonyms.eng.m}</span> </p>
                                         <p className="p-info">Top Level Domain: <span>{item.tld ? item.tld.join(", ") : null}</span></p>
                                         <p className="p-info">Currencies: <span>{item.currencies ? Object.keys(item.currencies).map(item2 => item.currencies[item2].symbol ? `${item.currencies[item2].name} - ${item.currencies[item2].symbol}` : item.currencies[item2].name).join(", ") : 'no'}</span></p>
                                         <p className="p-info">Languages: <span>{item.languages ? Object.values(item.languages).join(", ") : 'no'}</span></p>
@@ -43,7 +45,7 @@ function CountryDetails({ mainApi }) {
                                 </div>
                                 <div className="border_countries">
                                     <span>Border Countries: {item.borders ? mainApi.filter(el => item.borders.includes(el['cca3'])).map((item2, index2) =>
-                                        <a key={index2} href={`/${item2.name.common}`}>{item2.name.common}</a>)
+                                        <a key={index2} href={`${item2.name.common}`}>{item2.name.common}</a>)
                                         : null}
                                     </span>
                                 </div>
