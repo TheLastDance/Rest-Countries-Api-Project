@@ -3,7 +3,7 @@ import { ReactComponent as Arrow } from '../../svg/arrow-left.svg'; //icon
 
 
 function CountryDetails({ mainApi }) {
-    const url = window.location.pathname.slice(1);
+    const url = window.location.pathname.slice(1).substring(window.location.pathname.slice(1).lastIndexOf('/') + 1);
     const [api, setApi] = useState([]);
 
     useEffect(() => {

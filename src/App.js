@@ -29,10 +29,10 @@ function App() {
       <nav className='bar'>
         <Navbar mode={mode} changeMode={changeMode} />
       </nav>
-      {url === '' ? <div className='content'>
+      {url === 'Rest-Countries-Api-Project/build/' ? <div className='content'>
         <ContentFirstPage api={api} />
       </div> : null}
-      {url !== '' ? <CountryDetails mode={mode} mainApi={api} /> : null}
+      {url !== 'Rest-Countries-Api-Project/build/' ? <CountryDetails mode={mode} mainApi={api} /> : null}
     </div>
   );
 }
