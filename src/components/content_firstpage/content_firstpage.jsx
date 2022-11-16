@@ -52,10 +52,10 @@ function ContentFirstPage({ api }) {
 
 
     return (
-        <>
+        <div className='content'>
             <ContentInputs searchFunc={searchFunc} letterFunc={letterFunc} regionFunc={regionFunc} regionFilter={regionFilter} />
             <Countries api={api} search={search} filterBy={filterBy} />
-        </>
+        </div>
     )
 }
 

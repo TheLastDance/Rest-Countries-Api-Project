@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+
+
 function CountriesCards({ item, search, filterBy }) {
     const exp = (item.name.common.toLowerCase().search(search) === -1 && filterBy.bySearch)
         || (item.name.common[0] !== search && filterBy.byLetter) || (item.region.search(search) === -1 && filterBy.byRegion) ? 'country_card hide' : 'country_card';
 
     return (
-        <a href={`${item.name.common}`}
+        <Link to={`${item.name.common}`}
             className={exp}>
             <img src={item.flags.png} alt={`${item.name.common}_flag`} />
             <div className="main_info">
@@ -12,7 +15,7 @@ function CountriesCards({ item, search, filterBy }) {
                 <p>Region: <span>{item.region}</span></p>
                 <p>Capital: <span>{item.capital.join(', ')}</span></p>
             </div>
-        </a>
+        </Link>
     )
 }
 

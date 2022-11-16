@@ -737,10 +737,28 @@ body {
 
 @media(max-width:450px) {
   .content {
+    .content_inputs {
+
+      .letter_search {
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        top: 90%;
+        justify-items: center;
+        left: 50%;
+        transform: translate(-50%, 45%);
+        width: 250px;
+
+        span {
+          padding-right: 0;
+        }
+      }
+    }
+
     .countries {
       padding: 0 10%;
       grid-template-columns: repeat(1, 1fr);
       row-gap: 30px;
+      padding-top: 20px;
 
       .country_card:hover {
         transform: unset;
@@ -759,13 +777,7 @@ body {
       }
 
       .letter_search {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-
         span {
-          padding-right: 5px;
-          cursor: pointer;
           color: $VeryDarkBlueLM;
         }
 

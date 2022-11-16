@@ -770,9 +770,24 @@ body {
 }
 
 @media (max-width:450px) {
+    .content .content_inputs .letter_search {
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        justify-items: center;
+        left: 50%;
+        top: 90%;
+        -webkit-transform: translate(-50%, 45%);
+        transform: translate(-50%, 45%);
+        width: 250px
+    }
+
+    .content .content_inputs .letter_search span {
+        padding-right: 0
+    }
+
     .content .countries {
         grid-template-columns: repeat(1, 1fr);
-        padding: 0 10%;
+        padding: 20px 10% 0;
         row-gap: 30px
     }
 
@@ -788,16 +803,8 @@ body {
         width: 100%
     }
 
-    .content .content_inputs .letter_search {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%
-    }
-
     .content .content_inputs .letter_search span {
-        color: #111517;
-        cursor: pointer;
-        padding-right: 5px
+        color: #111517
     }
 
     .content .content_inputs .letter_search span:hover {
@@ -831,4 +838,4 @@ body {
     }
 }
 
-/*# sourceMappingURL=main.fb8b771b.css.map*/
+/*# sourceMappingURL=main.0c1dabcc.css.map*/

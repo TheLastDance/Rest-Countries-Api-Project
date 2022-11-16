@@ -3,9 +3,10 @@ import './App.scss';
 import ContentFirstPage from './components/content_firstpage/content_firstpage';
 import Navbar from './components/navbar';
 import CountryDetails from './components/second_page/country_details';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
-  const url = window.location.pathname.slice(1);
+  //const url = window.location.pathname.slice(1);
   const [mode, setMode] = useState(JSON.parse(localStorage.getItem("mode")));
   const [api, setApi] = useState([]);
 
@@ -27,13 +28,11 @@ function App() {
   //changed
   return (
     <div className={!mode || mode === null ? null : 'dark_mode'}>
-      <nav className='bar'>
-        <Navbar mode={mode} changeMode={changeMode} />
-      </nav>
-      {url === 'Rest-Countries-Api-Project/build/' ? <div className='content'>
-        <ContentFirstPage api={api} />
-      </div> : null}
-      {url !== 'Rest-Countries-Api-Project/build/' ? <CountryDetails mode={mode} mainApi={api} /> : null}
+      <Navbar mode={mode} changeMode={changeMode} />
+      <Routes>
+        <Route path='Rest-Countries-Api-Project/build/' element={<ContentFirstPage api={api} />}></Route>
+        <Route path='*' element={<CountryDetails mode={mode} mainApi={api} />}></Route>
+      </Routes>
     </div>
   );
 }
