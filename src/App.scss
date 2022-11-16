@@ -603,6 +603,56 @@ body {
       column-gap: 10px;
     }
   }
+
+  .country_details {
+
+
+    .country_details_container {
+
+      button {
+        margin-top: 35px;
+      }
+
+      .country_main {
+        flex-direction: column;
+        margin-top: 35px;
+
+
+        .country_flag {
+          width: 70%;
+
+          img {
+            max-height: 400px;
+          }
+        }
+
+        .country_info {
+          width: 100%;
+          margin-left: 0;
+          margin: 20px 0;
+
+          h1 {
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &_2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            column-gap: 10px;
+
+            .country_info_2_right {
+              margin-left: 0;
+              max-width: unset;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media(max-width:715px) {
@@ -635,6 +685,54 @@ body {
       column-gap: 10px;
     }
   }
+
+  .country_details {
+
+
+    .country_details_container {
+
+      button {
+        margin-left: 5%;
+      }
+
+      .country_main {
+
+        .country_flag {
+          width: 90%;
+        }
+
+        .country_info {
+          width: 90%;
+
+          h1 {
+            margin-top: 25px;
+            position: unset;
+            display: inline-block;
+            left: unset;
+            transform: unset;
+          }
+
+          &_2 {
+            display: block;
+            grid-template-columns: unset;
+            justify-items: unset;
+            column-gap: unset;
+            margin-top: 25px;
+
+            .country_info_2_right {
+              margin-left: 0;
+              max-width: unset;
+              margin-top: 20px;
+            }
+          }
+
+          .border_countries {
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media(max-width:450px) {
@@ -649,6 +747,7 @@ body {
       }
     }
   }
+
 }
 
 @media(max-width:415px) {

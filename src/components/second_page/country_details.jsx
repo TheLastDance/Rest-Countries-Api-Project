@@ -13,8 +13,6 @@ function CountryDetails({ mainApi }) {
             .catch(e => console.error(e))
     }, [url]);
 
-    console.log(url);
-
     return (
         <div className='country_details'>
             {api.length === 0 ? <div className="loader_container"><div className="loader"><div><div></div></div></div></div>

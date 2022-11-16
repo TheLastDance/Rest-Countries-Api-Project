@@ -89,7 +89,7 @@ body {
     padding: 0 5%;
     position: fixed;
     width: 100%;
-    z-index: 2
+    z-index: 3
 }
 
 .bar a {
@@ -311,9 +311,15 @@ body {
 }
 
 .content .countries .country_card .main_info h3 {
+    font-family: NunitoSans-B;
+    margin-bottom: 12px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content
+}
+
+.content .countries .country_card .main_info p span {
+    font-family: NunitoSans-L
 }
 
 .content .countries .country_card:hover {
@@ -462,6 +468,7 @@ body {
 }
 
 .country_details .country_details_container .country_main .country_info_2 .country_info_2_right {
+    margin-left: 5px;
     max-width: 65%
 }
 
@@ -595,4 +602,233 @@ body {
     }
 }
 
-/*# sourceMappingURL=main.19fbcc95.css.map*/
+@media (max-width:1150px) {
+    .content .content_inputs .letter_search {
+        left: 0;
+        top: 100%;
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%)
+    }
+
+    .content .content_inputs .letter_search span {
+        color: #111517;
+        cursor: pointer;
+        padding-right: 5px
+    }
+
+    .content .content_inputs .letter_search span:hover {
+        color: #858585
+    }
+
+    .content .countries {
+        -webkit-column-gap: 10px;
+        column-gap: 10px;
+        row-gap: 20px
+    }
+
+    .content .countries .country_card .main_info {
+        padding: 5px 15px
+    }
+}
+
+@media (max-width:1000px) {
+
+    .bar,
+    .content,
+    .country_details {
+        padding-left: 5px;
+        padding-right: 5px
+    }
+
+    .content .countries {
+        -webkit-column-gap: 30px;
+        column-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 30px
+    }
+}
+
+@media (max-width:750px) {
+    .content .countries {
+        -webkit-column-gap: 10px;
+        column-gap: 10px;
+        row-gap: 30px
+    }
+
+    .country_details .country_details_container button {
+        margin-top: 35px
+    }
+
+    .country_details .country_details_container .country_main {
+        flex-direction: column;
+        margin-top: 35px
+    }
+
+    .country_details .country_details_container .country_main .country_flag {
+        width: 70%
+    }
+
+    .country_details .country_details_container .country_main .country_flag img {
+        max-height: 400px
+    }
+
+    .country_details .country_details_container .country_main .country_info {
+        margin: 20px 0;
+        width: 100%
+    }
+
+    .country_details .country_details_container .country_main .country_info h1 {
+        display: inline-block;
+        left: 50%;
+        position: relative;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%)
+    }
+
+    .country_details .country_details_container .country_main .country_info_2 {
+        grid-column-gap: 10px;
+        -webkit-column-gap: 10px;
+        column-gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center
+    }
+
+    .country_details .country_details_container .country_main .country_info_2 .country_info_2_right {
+        margin-left: 0;
+        max-width: none
+    }
+}
+
+@media (max-width:715px) {
+    .content .content_inputs {
+        display: block
+    }
+
+    .content .content_inputs input:focus {
+        width: 100%
+    }
+
+    .content .content_inputs .dropdown {
+        margin-top: 20px;
+        width: 200px
+    }
+
+    .content .countries {
+        -webkit-column-gap: 30px;
+        column-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px
+    }
+}
+
+@media (max-width:500px) {
+    .content .countries {
+        -webkit-column-gap: 10px;
+        column-gap: 10px;
+        row-gap: 10px
+    }
+
+    .country_details .country_details_container button {
+        margin-left: 5%
+    }
+
+    .country_details .country_details_container .country_main .country_flag,
+    .country_details .country_details_container .country_main .country_info {
+        width: 90%
+    }
+
+    .country_details .country_details_container .country_main .country_info h1 {
+        display: inline-block;
+        left: auto;
+        margin-top: 25px;
+        position: static;
+        -webkit-transform: none;
+        -webkit-transform: initial;
+        transform: none
+    }
+
+    .country_details .country_details_container .country_main .country_info_2 {
+        -webkit-column-gap: normal;
+        -webkit-column-gap: initial;
+        column-gap: normal;
+        display: block;
+        grid-template-columns: none;
+        justify-items: legacy;
+        margin-top: 25px
+    }
+
+    .country_details .country_details_container .country_main .country_info_2 .country_info_2_right {
+        margin-left: 0;
+        margin-top: 20px;
+        max-width: none
+    }
+
+    .country_details .country_details_container .country_main .country_info .border_countries {
+        margin-top: 25px
+    }
+}
+
+@media (max-width:450px) {
+    .content .countries {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 10%;
+        row-gap: 30px
+    }
+
+    .content .countries .country_card:hover {
+        -webkit-transform: none;
+        -webkit-transform: initial;
+        transform: none
+    }
+}
+
+@media (max-width:415px) {
+    .content .content_inputs input {
+        width: 100%
+    }
+
+    .content .content_inputs .letter_search {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%
+    }
+
+    .content .content_inputs .letter_search span {
+        color: #111517;
+        cursor: pointer;
+        padding-right: 5px
+    }
+
+    .content .content_inputs .letter_search span:hover {
+        color: #858585
+    }
+
+    .content .countries {
+        padding: 20px 10% 0
+    }
+}
+
+@media (max-width:375px) {
+    .bar a h2 {
+        font-size: 18px
+    }
+
+    .bar .colormode svg {
+        height: 12px;
+        width: 12px
+    }
+
+    .bar .colormode p {
+        font-size: 12px
+    }
+}
+
+@media (max-width:330px) {
+    .content .countries {
+        padding-left: 0;
+        padding-right: 0
+    }
+}
+
+/*# sourceMappingURL=main.fb8b771b.css.map*/
