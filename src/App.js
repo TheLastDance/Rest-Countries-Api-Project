@@ -31,7 +31,7 @@ function App() {
       <Navbar mode={mode} changeMode={changeMode} />
       <Routes>
         <Route path='Rest-Countries-Api-Project/build/' element={<ContentFirstPage api={api} />}></Route>
-        <Route path='*' element={<CountryDetails mode={mode} mainApi={api} />}></Route>
+        <Route path='Rest-Countries-Api-Project/build/:name' element={<CountryDetails mode={mode} mainApi={api} />}></Route>
       </Routes>
     </div>
   );

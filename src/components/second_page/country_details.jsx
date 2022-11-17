@@ -1,19 +1,23 @@
 import { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from '../../svg/arrow-left.svg'; //icon
 
 
 
 function CountryDetails({ mainApi }) {
-    const url = window.location.pathname.slice(1).substring(window.location.pathname.slice(1).lastIndexOf('/') + 1); //changed
+    //const url = window.location.pathname.slice(1).substring(window.location.pathname.slice(1).lastIndexOf('/') + 1); //changed
     const [api, setApi] = useState([]);
+    const { name } = useParams();
 
     useEffect(() => {
-        fetch(`https://restcountries.com/v3.1/name/${url}?fullText=true`)
+        fetch(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
             .then(res => res.json())
             .then(json => setApi(json))
             .catch(e => console.error(e))
-    }, [url]);
+    }, [name]);
+
+    console.log(api.length)
 
     return (
         <div className='country_details'>
@@ -37,7 +41,7 @@ function CountryDetails({ mainApi }) {
                                     </div>
                                     <div className="country_info_2_right">
                                         <p className="p-info">Area: <span>{`${item.area.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} km2`}</span> </p>
-                                        <p className="p-info">Demonym: <span>{item.demonyms.eng.m}</span> </p>
+                                        <p className="p-info">Demonym: <span>{item.demonyms ? item.demonyms.eng.m : null}</span> </p>
                                         <p className="p-info">Top Level Domain: <span>{item.tld ? item.tld.join(", ") : null}</span></p>
                                         <p className="p-info">Currencies: <span>{item.currencies ? Object.keys(item.currencies).map(item2 => item.currencies[item2].symbol ? `${item.currencies[item2].name} - ${item.currencies[item2].symbol}` : item.currencies[item2].name).join(", ") : 'no'}</span></p>
                                         <p className="p-info">Languages: <span>{item.languages ? Object.values(item.languages).join(", ") : 'no'}</span></p>
@@ -45,7 +49,7 @@ function CountryDetails({ mainApi }) {
                                 </div>
                                 <div className="border_countries">
                                     <span>Border Countries: {item.borders ? mainApi.filter(el => item.borders.includes(el['cca3'])).map((item2, index2) =>
-                                        <a key={index2} href={`${item2.name.common}`}>{item2.name.common}</a>)
+                                        <Link key={index2} to={`/Rest-Countries-Api-Project/build/${item2.name.common}`}>{item2.name.common}</Link>)
                                         : null}
                                     </span>
                                 </div>
