@@ -4,6 +4,8 @@ import ContentFirstPage from './components/content_firstpage/content_firstpage';
 import Navbar from './components/navbar';
 import CountryDetails from './components/second_page/country_details';
 import { Route, Routes } from 'react-router-dom';
+import NotFoundPage from './components/not_found_page';
+
 
 function App() {
   //const url = window.location.pathname.slice(1);
@@ -32,9 +34,11 @@ function App() {
       <Routes>
         <Route path='Rest-Countries-Api-Project/build/' element={<ContentFirstPage api={api} />}></Route>
         <Route path='Rest-Countries-Api-Project/build/:name' element={<CountryDetails mode={mode} mainApi={api} />}></Route>
+        <Route path='/*' element={<NotFoundPage />}></Route>
       </Routes>
     </div>
   );
 }
 
 export default App;
+

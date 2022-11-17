@@ -585,6 +585,17 @@ body {
     color: #fff
 }
 
+.not_found {
+    background-color: #202c37;
+    color: #fff;
+    font-family: NunitoSans-M;
+    font-size: 16px;
+    min-height: calc(100vh - 70px);
+    position: absolute;
+    top: 70px;
+    width: 100%
+}
+
 @media (max-width:1650px) {
     .content .countries {
         -webkit-column-gap: 40px;
@@ -841,4 +852,4 @@ body {
     }
 }
 
-/*# sourceMappingURL=main.eb5a9a1f.css.map*/
+/*# sourceMappingURL=main.af300f92.css.map*/

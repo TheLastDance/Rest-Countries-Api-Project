@@ -524,6 +524,14 @@ body {
 
 }
 
+.not_found {
+  position: absolute;
+  top: 70px;
+  min-height: calc(100vh - 70px);
+  background-color: $VeryDarkBlue;
+  width: 100%;
+  @include font('NunitoSans-M', 16px, $White);
+}
 
 
 @media(max-width:1650px) {
