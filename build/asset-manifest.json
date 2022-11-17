@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.0c1dabcc.css",
+    "main.css": "/static/css/main.eb5a9a1f.css",
     "main.js": "/static/js/main.45571db7.js",
     "static/js/787.02a3aab5.chunk.js": "/static/js/787.02a3aab5.chunk.js",
     "static/media/NunitoSans-ExtraBold.woff": "/static/media/NunitoSans-ExtraBold.cfb0ae0a35db58384df6.woff",
@@ -15,12 +15,12 @@
     "static/media/search_icon.svg": "/static/media/search_icon.b1f781b99ceaafb9c831949bb54ae3cd.svg",
     "static/media/arrow-left.svg": "/static/media/arrow-left.83aa775a65892efff8dd306eccced5ba.svg",
     "static/media/chevronDown.svg": "/static/media/chevronDown.8624f04faf16b2d07c00235d9dc68ae2.svg",
-    "main.0c1dabcc.css.map": "/static/css/main.0c1dabcc.css.map",
+    "main.eb5a9a1f.css.map": "/static/css/main.eb5a9a1f.css.map",
     "main.45571db7.js.map": "/static/js/main.45571db7.js.map",
     "787.02a3aab5.chunk.js.map": "/static/js/787.02a3aab5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c1dabcc.css",
+    "static/css/main.eb5a9a1f.css",
     "static/js/main.45571db7.js"
   ]
 }

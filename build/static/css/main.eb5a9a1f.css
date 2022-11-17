@@ -782,7 +782,10 @@ body {
     }
 
     .content .content_inputs .letter_search span {
-        padding-right: 0
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+        width: 100%
     }
 
     .content .countries {
@@ -838,4 +841,4 @@ body {
     }
 }
 
-/*# sourceMappingURL=main.0c1dabcc.css.map*/
+/*# sourceMappingURL=main.eb5a9a1f.css.map*/
