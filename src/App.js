@@ -32,8 +32,8 @@ function App() {
     <div className={!mode || mode === null ? null : 'dark_mode'}>
       <Navbar mode={mode} changeMode={changeMode} />
       <Routes>
-        <Route path='Rest-Countries-Api-Project/build/' element={<ContentFirstPage api={api} />}></Route>
-        <Route path='Rest-Countries-Api-Project/build/:name' element={<CountryDetails mode={mode} mainApi={api} />}></Route>
+        <Route path='/' element={<ContentFirstPage api={api} />}></Route>
+        <Route path='country/:name' element={<CountryDetails mode={mode} mainApi={api} />}></Route>
         <Route path='/*' element={<NotFoundPage />}></Route>
       </Routes>
     </div>

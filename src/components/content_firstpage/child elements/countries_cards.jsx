@@ -6,7 +6,7 @@ function CountriesCards({ item, search, filterBy }) {
         || (item.name.common[0] !== search && filterBy.byLetter) || (item.region.search(search) === -1 && filterBy.byRegion) ? 'country_card hide' : 'country_card';
 
     return (
-        <Link to={`${item.name.common}`}
+        <Link to={`country/${item.name.common}`}
             className={exp}>
             <img src={item.flags.png} alt={`${item.name.common}_flag`} />
             <div className="main_info">

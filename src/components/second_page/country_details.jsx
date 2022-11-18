@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from '../../svg/arrow-left.svg'; //icon
 import NotFoundPage from "../not_found_page";
 
-
-
-
 function CountryDetails({ mainApi }) {
     //const url = window.location.pathname.slice(1).substring(window.location.pathname.slice(1).lastIndexOf('/') + 1); //changed
     const [api, setApi] = useState([]);
@@ -54,7 +51,7 @@ function CountryDetails({ mainApi }) {
                                     </div>
                                     <div className="border_countries">
                                         <span>Border Countries: {item.borders ? mainApi.filter(el => item.borders.includes(el['cca3'])).map((item2, index2) =>
-                                            <Link key={index2} to={`/Rest-Countries-Api-Project/build/${item2.name.common}`}>{item2.name.common}</Link>)
+                                            <Link key={index2} to={`/country/${item2.name.common}`}>{item2.name.common}</Link>)
                                             : null}
                                         </span>
                                     </div>

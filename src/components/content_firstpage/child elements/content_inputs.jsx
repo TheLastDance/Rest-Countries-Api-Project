@@ -44,7 +44,7 @@ function ContentInputs({ searchFunc, letterFunc, regionFunc, regionFilter }) {
                     <ChevronDown />
                 </div>
                 {regionSelect ? <div className='drop_menu' onClick={regionFunc}>
-                    {regions.map((item, index) => <div className='regions' key={index} value={item}>{item}</div>)}
+                    {regions.map((item, index) => <div className='regions' key={index}>{item}</div>)}
                 </div> : null}
             </div>
         </div>

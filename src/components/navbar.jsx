@@ -7,7 +7,7 @@ function Navbar({ mode, changeMode }) {
     //changed
     return (
         <div className='bar'>
-            <Link to="/Rest-Countries-Api-Project/build/"><h2>Where in the world?</h2></Link>
+            <Link to="/"><h2>Where in the world?</h2></Link>
             <div className="colormode" onClick={changeMode}>
                 <div className='effect'></div>
                 {!mode || mode === null ? <>
