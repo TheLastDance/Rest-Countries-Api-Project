@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Rest-Countries-Api-Project/static/css/main.ab75e9d3.css",
+    "main.js": "/Rest-Countries-Api-Project/static/js/main.e5fb525b.js",
+    "static/js/787.02a3aab5.chunk.js": "/Rest-Countries-Api-Project/static/js/787.02a3aab5.chunk.js",
+    "static/media/NunitoSans-ExtraBold.woff": "/Rest-Countries-Api-Project/static/media/NunitoSans-ExtraBold.cfb0ae0a35db58384df6.woff",
+    "static/media/NunitoSans-SemiBold.woff": "/Rest-Countries-Api-Project/static/media/NunitoSans-SemiBold.4ce75b175ef614411eb2.woff",
+    "static/media/NunitoSans-Light.woff": "/Rest-Countries-Api-Project/static/media/NunitoSans-Light.d84a76763ea532730302.woff",
+    "static/media/NunitoSans-ExtraBold.woff2": "/Rest-Countries-Api-Project/static/media/NunitoSans-ExtraBold.5b5e0eccfdb81b30222d.woff2",
+    "static/media/NunitoSans-SemiBold.woff2": "/Rest-Countries-Api-Project/static/media/NunitoSans-SemiBold.0cfa405f6bb320ea6867.woff2",
+    "static/media/NunitoSans-Light.woff2": "/Rest-Countries-Api-Project/static/media/NunitoSans-Light.95d0ad530f0d070ad44c.woff2",
+    "static/media/sun.svg": "/Rest-Countries-Api-Project/static/media/sun.826aa9f77b8499dab40e322c219f6b22.svg",
+    "static/media/moon.svg": "/Rest-Countries-Api-Project/static/media/moon.b9dfb65f058d541315bd400d92fc8eb4.svg",
+    "index.html": "/Rest-Countries-Api-Project/index.html",
+    "static/media/search_icon.svg": "/Rest-Countries-Api-Project/static/media/search_icon.b1f781b99ceaafb9c831949bb54ae3cd.svg",
+    "static/media/arrow-left.svg": "/Rest-Countries-Api-Project/static/media/arrow-left.83aa775a65892efff8dd306eccced5ba.svg",
+    "static/media/chevronDown.svg": "/Rest-Countries-Api-Project/static/media/chevronDown.8624f04faf16b2d07c00235d9dc68ae2.svg",
+    "main.ab75e9d3.css.map": "/Rest-Countries-Api-Project/static/css/main.ab75e9d3.css.map",
+    "main.e5fb525b.js.map": "/Rest-Countries-Api-Project/static/js/main.e5fb525b.js.map",
+    "787.02a3aab5.chunk.js.map": "/Rest-Countries-Api-Project/static/js/787.02a3aab5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab75e9d3.css",
+    "static/js/main.e5fb525b.js"
+  ]
+}
