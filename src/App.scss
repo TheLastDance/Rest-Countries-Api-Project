@@ -329,6 +329,11 @@ body {
   @include font('NunitoSans-M', 16px, $VeryDarkBlueLM);
   min-height: 100vh;
 
+  .not_found {
+    width: fit-content;
+    padding: 0;
+  }
+
 
   .country_details_container {
 
@@ -423,6 +428,16 @@ body {
       }
     }
   }
+}
+
+.not_found {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding: 0 5%;
+  background-color: $VeryLightGray;
+  @include font('NunitoSans-M', 16px, $VeryDarkBlueLM);
 }
 
 .dark_mode {
@@ -522,16 +537,13 @@ body {
     }
   }
 
+  .not_found {
+    background-color: $VeryDarkBlue;
+    @include font('NunitoSans-M', 16px, $White);
+  }
+
 }
 
-.not_found {
-  position: absolute;
-  top: 70px;
-  min-height: calc(100vh - 70px);
-  background-color: $VeryDarkBlue;
-  width: 100%;
-  @include font('NunitoSans-M', 16px, $White);
-}
 
 
 @media(max-width:1650px) {

@@ -34,7 +34,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ContentFirstPage api={api} />}></Route>
         <Route path='country/:name' element={<CountryDetails mode={mode} mainApi={api} />}></Route>
-        <Route path='/*' element={<NotFoundPage />}></Route>
+        <Route path='*' element={<NotFoundPage />}></Route>
       </Routes>
     </div>
   );

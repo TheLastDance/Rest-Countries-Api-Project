@@ -5,7 +5,6 @@ import { ReactComponent as Arrow } from '../../svg/arrow-left.svg'; //icon
 import NotFoundPage from "../not_found_page";
 
 function CountryDetails({ mainApi }) {
-    //const url = window.location.pathname.slice(1).substring(window.location.pathname.slice(1).lastIndexOf('/') + 1); //changed
     const [api, setApi] = useState([]);
     const { name } = useParams();
     const [isLoading, setIsLoading] = useState(false);
@@ -18,7 +17,6 @@ function CountryDetails({ mainApi }) {
             .catch(e => { console.error(e); setIsLoading(false) })
     }, [name]);
 
-    console.log(isLoading)
 
     return (
         <>
@@ -57,9 +55,8 @@ function CountryDetails({ mainApi }) {
                                     </div>
                                 </div>
                             </div>
-                        </div>) : null}
+                        </div>) : <NotFoundPage />}
             </div>
-            {api.status === 404 ? <NotFoundPage /> : null}
         </>
     )
 }
