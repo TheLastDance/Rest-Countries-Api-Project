@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Rest-Countries-Api-Project/static/css/main.f78cc31f.css",
-    "main.js": "/Rest-Countries-Api-Project/static/js/main.4e3c69f3.js",
+    "main.js": "/Rest-Countries-Api-Project/static/js/main.b18ea344.js",
     "static/js/787.02a3aab5.chunk.js": "/Rest-Countries-Api-Project/static/js/787.02a3aab5.chunk.js",
     "static/media/NunitoSans-ExtraBold.woff": "/Rest-Countries-Api-Project/static/media/NunitoSans-ExtraBold.cfb0ae0a35db58384df6.woff",
     "static/media/NunitoSans-SemiBold.woff": "/Rest-Countries-Api-Project/static/media/NunitoSans-SemiBold.4ce75b175ef614411eb2.woff",
@@ -16,11 +16,11 @@
     "static/media/arrow-left.svg": "/Rest-Countries-Api-Project/static/media/arrow-left.83aa775a65892efff8dd306eccced5ba.svg",
     "static/media/chevronDown.svg": "/Rest-Countries-Api-Project/static/media/chevronDown.8624f04faf16b2d07c00235d9dc68ae2.svg",
     "main.f78cc31f.css.map": "/Rest-Countries-Api-Project/static/css/main.f78cc31f.css.map",
-    "main.4e3c69f3.js.map": "/Rest-Countries-Api-Project/static/js/main.4e3c69f3.js.map",
+    "main.b18ea344.js.map": "/Rest-Countries-Api-Project/static/js/main.b18ea344.js.map",
     "787.02a3aab5.chunk.js.map": "/Rest-Countries-Api-Project/static/js/787.02a3aab5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f78cc31f.css",
-    "static/js/main.4e3c69f3.js"
+    "static/js/main.b18ea344.js"
   ]
 }
