@@ -7,14 +7,13 @@ import NotFoundPage from "../not_found_page";
 function CountryDetails({ mainApi }) {
     const [api, setApi] = useState([]);
     const { name } = useParams();
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setIsLoading(true)
         fetch(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
             .then(res => res.json())
-            .then(json => { setApi(json); setIsLoading(false) })
-            .catch(e => { console.error(e); setIsLoading(false) })
+            .then(json => { setIsLoading(false); setApi(json); })
+            .catch(e => { setIsLoading(false); console.error(e); })
     }, [name]);
 
 
